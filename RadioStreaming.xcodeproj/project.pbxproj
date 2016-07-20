@@ -13,6 +13,10 @@
 		4F0CA4C11CE1424A00C294F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CA4BF1CE1424A00C294F8 /* Main.storyboard */; };
 		4F0CA4C31CE1424A00C294F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CA4C21CE1424A00C294F8 /* Assets.xcassets */; };
 		4F0CA4C61CE1424A00C294F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0CA4C41CE1424A00C294F8 /* LaunchScreen.storyboard */; };
+		4F0CA4D01CE1443E00C294F8 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0CA4CF1CE1443E00C294F8 /* AVKit.framework */; };
+		4FC122291D4039E40041B851 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC122281D4039E40041B851 /* logo.png */; };
+		4FC1222B1D403B0E0041B851 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1222A1D403B0E0041B851 /* playbutton.png */; };
+		4FC1222F1D403C6E0041B851 /* stopbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1222E1D403C6E0041B851 /* stopbutton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,11 @@
 		4F0CA4C21CE1424A00C294F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F0CA4C51CE1424A00C294F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F0CA4C71CE1424A00C294F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0CA4CD1CE1433500C294F8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4F0CA4CF1CE1443E00C294F8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		4FC122281D4039E40041B851 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4FC1222A1D403B0E0041B851 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		4FC1222E1D403C6E0041B851 /* stopbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopbutton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0CA4D01CE1443E00C294F8 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,8 @@
 		4F0CA4AA1CE1424A00C294F8 = {
 			isa = PBXGroup;
 			children = (
+				4F0CA4CF1CE1443E00C294F8 /* AVKit.framework */,
+				4F0CA4CD1CE1433500C294F8 /* MediaPlayer.framework */,
 				4F0CA4B51CE1424A00C294F8 /* RadioStreaming */,
 				4F0CA4B41CE1424A00C294F8 /* Products */,
 			);
@@ -74,6 +86,9 @@
 		4F0CA4B61CE1424A00C294F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FC122281D4039E40041B851 /* logo.png */,
+				4FC1222A1D403B0E0041B851 /* playbutton.png */,
+				4FC1222E1D403C6E0041B851 /* stopbutton.png */,
 				4F0CA4B71CE1424A00C294F8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -110,6 +125,7 @@
 				TargetAttributes = {
 					4F0CA4B21CE1424A00C294F8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3D23847FTP;
 					};
 				};
 			};
@@ -137,8 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F0CA4C61CE1424A00C294F8 /* LaunchScreen.storyboard in Resources */,
+				4FC1222B1D403B0E0041B851 /* playbutton.png in Resources */,
+				4FC122291D4039E40041B851 /* logo.png in Resources */,
 				4F0CA4C31CE1424A00C294F8 /* Assets.xcassets in Resources */,
 				4F0CA4C11CE1424A00C294F8 /* Main.storyboard in Resources */,
+				4FC1222F1D403C6E0041B851 /* stopbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +282,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RadioStreaming/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ignaciom6.RadioStreaming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -274,10 +296,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RadioStreaming/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ignaciom6.RadioStreaming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -300,6 +325,7 @@
 				4F0CA4CC1CE1424A00C294F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
